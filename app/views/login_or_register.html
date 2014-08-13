@@ -1,0 +1,15 @@
+<form class="form-group" data-ng-submit="login_or_register()" role="form" novalidate>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" type="text" id="email"
+               data-ng-model="user.email" placeholder="Enter email"/>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input class="form-control" type="password" id="password"
+               data-ng-model="user.password" placeholder="Enter password"/>
+    </div>
+
+    <input type="submit" class="btn btn-default"/>
+</form>

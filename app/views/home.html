@@ -1,0 +1,15 @@
+gi<div class="row">
+    <div class="col-lg-4 callout" data-ng-repeat="tab in tabs"
+         data-ng-class="{grey: tab.active}" data-ng-mouseenter="activateOnly(tab.title)"
+         data-ng-animate="{enter: tab.active, leave: !tab.active}">
+        <span ng-class="name_to_class[tab.title]"></span>
+
+        <h2 data-ng-class="{grey: tab.active}">{{ tab.title }}</h2>
+        <ul class="list-group" data-ng-show="tab.content.length && isType(tab.content, 'object')">
+            <li class="list-group-item" style="color: black!important;" data-ng-repeat="advant in tab.content">
+                {{ advant }}
+            </li>
+        </ul>
+        <p data-ng-show="isType(tab.content, 'string')" data-ng-bind="tab.content"></p>
+    </div>
+</div>
